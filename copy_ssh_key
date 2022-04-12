@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for server in 10.100.3.1 10.100.3.2 10.100.3.3 10.100.3.11 10.100.3.12; do
+    ssh-copy-id vmk3s-admin@$server
+done
