@@ -1,0 +1,13 @@
+[ubuntu]
+192.168.5.50 ansible_user=brian
+192.168.5.51 ansible_user=brian
+10.100.100.52 ansible_user=brian
+10.100.100.54 ansible_user=brian
+10.213.22.16 ansible_user=pi
+
+[rhel]
+10.100.3.1 ansible_user=vmk3s-admin
+10.100.3.2 ansible_user=vmk3s-admin
+10.100.3.3 ansible_user=vmk3s-admin
+10.100.3.11 ansible_user=vmk3s-admin
+10.100.3.12 ansible_user=vmk3s-admin
