@@ -1,0 +1,8 @@
+- hosts: "rehl"
+  become: yes
+  tasks:
+    - name: yum
+      yum:
+        update_cache: yes
+        name: '*'
+        state: latest
