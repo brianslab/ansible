@@ -1,5 +1,13 @@
 #!/bin/bash
 
-for server in 10.100.3.1 10.100.3.2 10.100.3.3 10.100.3.11 10.100.3.12; do
-    ssh-copy-id vmk3s-admin@$server
+for vmk3s in 10.100.3.1 10.100.3.2 10.100.3.3 10.100.3.11 10.100.3.12; do
+    ssh-copy-id vmk3s-admin@$vmk3s
+done
+
+for server in 192.168.5.50 192.168.5.51 10.100.100.52 10.100.100.54; do
+    ssh-copy-id brian@$server
+done
+
+for pi in 10.213.22.16; do
+    ssh-copy-id pi@$pi
 done
