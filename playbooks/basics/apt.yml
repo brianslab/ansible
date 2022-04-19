@@ -1,4 +1,6 @@
-- hosts: "ubuntu"
+- hosts: 
+  - "ubuntu"
+  - "vmk3s"
   become: yes
   tasks:
     - name: apt

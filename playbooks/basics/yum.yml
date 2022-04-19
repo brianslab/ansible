@@ -1,4 +1,4 @@
-- hosts: "rehl"
+- hosts: "rhel"
   become: yes
   tasks:
     - name: yum

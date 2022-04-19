@@ -5,7 +5,7 @@
 10.100.100.54 ansible_user=brian
 10.213.22.16 ansible_user=pi
 
-[rhel]
+[vmk3s]
 10.100.3.1 ansible_user=vmk3s-admin
 10.100.3.2 ansible_user=vmk3s-admin
 10.100.3.3 ansible_user=vmk3s-admin
