@@ -11,3 +11,6 @@
 10.100.3.3 ansible_user=vmk3s-admin
 10.100.3.11 ansible_user=vmk3s-admin
 10.100.3.12 ansible_user=vmk3s-admin
+
+[rhel]
+10.100.100.254 ansible_user=brian

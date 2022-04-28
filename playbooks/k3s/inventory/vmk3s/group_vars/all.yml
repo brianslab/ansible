@@ -18,7 +18,7 @@ apiserver_endpoint: "10.100.3.252"
 k3s_token: ""
 
 # change these to your liking, the only required one is--no-deploy servicelb
-extra_server_args: "--no-deploy servicelb --no-deploy traefik --write-kubeconfig-mode 644 --kube-apiserver-arg default-not-ready-toleration-seconds=30 --kube-apiserver-arg default-unreachable-toleration-seconds=30 --kube-controller-arg node-monitor-period=20s --kube-controller-arg node-monitor-grace-period=20s --kubelet-arg node-status-update-frequency=5s"
+extra_server_args: "--no-deploy servicelb --write-kubeconfig-mode 644 --kube-apiserver-arg default-not-ready-toleration-seconds=30 --kube-apiserver-arg default-unreachable-toleration-seconds=30 --kube-controller-arg node-monitor-period=20s --kube-controller-arg node-monitor-grace-period=20s --kubelet-arg node-status-update-frequency=5s"
 extra_agent_args: "--kubelet-arg node-status-update-frequency=5s"
 
 # image tag for kube-vip
@@ -29,4 +29,4 @@ metal_lb_speaker_tag_version: "v0.12.1"
 metal_lb_controller_tag_version: "v0.12.1"
 
 # metallb ip range for load balancer
-metal_lb_ip_range: "10.100.3.245-10.100.3.251"
+metal_lb_ip_range: "10.100.3.235-10.100.3.251"

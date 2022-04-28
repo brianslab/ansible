@@ -1,13 +1,28 @@
 #!/bin/bash
 
 for vmk3s in 10.100.3.1 10.100.3.2 10.100.3.3 10.100.3.11 10.100.3.12; do
-    ssh-copy-id vmk3s-admin@$vmk3s
+    ping -c1 -W1 -q $vmk3s &>/dev/null
+    status=$( echo $? )
+
+    if [[ $status != 0 ]]; then
+        ssh-copy-id vmk3s-admin@$vmk3s
+    fi
 done
 
-for server in 192.168.5.50 192.168.5.51 10.100.100.52 10.100.100.54; do
-    ssh-copy-id brian@$server
+for server in 192.168.5.50 192.168.5.51 10.100.100.52 10.100.100.54 10.100.100.254; do
+    ping -c1 -W1 -q $server &>/dev/null
+    status=$( echo $? )
+
+    if [[ $status != 0 ]]; then
+        ssh-copy-id brian@$server
+    fi
 done
 
 for pi in 10.213.22.16; do
-    ssh-copy-id pi@$pi
+    ping -c1 -W1 -q $server &>/dev/null
+    status=$( echo $? )
+
+    if [[ $status != 0 ]]; then
+        ssh-copy-id pi@$pi
+    fi
 done
