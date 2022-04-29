@@ -1,8 +1,8 @@
 - hosts: "rhel"
   become: yes
   tasks:
-    - name: yum
-      yum:
+    - name: dnf
+      dnf:
         update_cache: yes
         name: '*'
         state: latest
