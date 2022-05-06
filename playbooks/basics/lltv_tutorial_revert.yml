@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: un-install vim
+    apt:
+      name: vim
+      state: absent
+
+  - name: un-install tmux
+    apt:
+      name: tmux
+      state: absent

@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: update repo index
+    apt:
+      update_cache: yes
+
+  - name: install vim
+    apt:
+      name: vim
+      state: latest
+
+  - name: install tmux
+    apt:
+      name: tmux
+      state: latest
