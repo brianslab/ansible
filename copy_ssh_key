@@ -5,16 +5,16 @@ for vmk3s in 10.100.3.1 10.100.3.2 10.100.3.3 10.100.3.11 10.100.3.12; do
     status=$( echo $? )
 
     if [[ $status == 0 ]]; then
-        ssh-copy-id vmk3s-admin@$vmk3s
+        ssh-copy-id -i ~/.ssh/brian_persephone.pub vmk3s-admin@$vmk3s
     fi
 done
 
-for server in 192.168.5.50 192.168.5.51 10.100.100.52 10.100.100.54 10.100.100.254; do
+for server in 192.168.5.51 10.13.37.69 10.100.100.52 10.100.100.54 10.100.100.254; do
     ping -c1 -W1 -q $server &>/dev/null
     status=$( echo $? )
 
     if [[ $status == 0 ]]; then
-        ssh-copy-id brian@$server
+        ssh-copy-id -i ~/.ssh/brian_persephone.pub brian@$server
     fi
 done
 
@@ -23,6 +23,6 @@ for pi in 10.213.22.16; do
     status=$( echo $? )
 
     if [[ $status == 0 ]]; then
-        ssh-copy-id pi@$pi
+        ssh-copy-id -i ~/.ssh/brian_persephone.pub pi@$pi
     fi
 done
