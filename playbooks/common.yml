@@ -1,0 +1,13 @@
+---
+- name: Common
+  hosts: all
+
+  tasks:
+    - name: Install standard applications
+      ansible.builtin.package:
+        name: "{{ iten }}"
+        state: present
+      with_items:
+        - "{{ standard_applications }}"
+        - "{{ host_base_packages | default ([]) }}"
+...
