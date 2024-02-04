@@ -5,7 +5,7 @@
   tasks:
     - name: Install standard applications
       ansible.builtin.package:
-        name: "{{ iten }}"
+        name: "{{ item }}"
         state: present
       with_items:
         - "{{ standard_applications }}"
