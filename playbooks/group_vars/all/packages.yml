@@ -1,5 +1,6 @@
 standard_applications:
   - mailx
+  - vim
   - git
   - tmux
   - python39
